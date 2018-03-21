@@ -1,0 +1,46 @@
+group 'org.plytimebandit.web.webbootflux'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+//apply plugin: 'application'
+//apply plugin: 'org.springframework.boot'
+
+
+//buildscript {
+//    repositories {
+//        mavenCentral()
+//    }
+//    dependencies {
+//        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.0.RELEASE")
+//    }
+//}
+
+
+sourceCompatibility = 1.8
+
+//mainClassName = "org.plytimebandit.web.webbootflux.WebBootFlux"
+
+//jar {
+//    manifest {
+//        attributes 'Main-Class': 'org.plytimebandit.web.webbootflux.WebBootFlux'
+//    }
+//
+//    from {
+//        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+//    }
+//}
+
+//springBoot {
+//    executable = true
+//}
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-webflux', version: '2.0.0.RELEASE'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
